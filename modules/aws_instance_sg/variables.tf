@@ -12,7 +12,7 @@ variable "ami" {
 
 variable "instance_type" {
   type = string
-  description = "Instance Tyoe"
+  description = "Instance Type"
 }
 
 variable "subnet_ids" {
