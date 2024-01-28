@@ -1,1 +1,7 @@
-In order to keep the credentials secure and enable multiple team members to apply changes to the infrastructure in the future, avoiding issues raised with possible concurrent updates from two or more members, we need implement state locking to avoid the corruption of the state file if two users are trying to update the infrastructure, this can be done by making use of the Remote State Backend to store the state file in a S3 bucket or terraform cloud
+In order to keep the credentials secure and enable multiple team members to apply changes to the infrastructure in the future, avoiding issues raised with possible concurrent updates from two or more members, we need implement state locking to avoid the corruption of the state file if two users are trying to update the infrastructure, this can be done by making use of the Remote State Backend to store the state file in a S3 bucket or terraform cloud.
+
+Adding and configuring ssh key to securely connect to the instances instead of using password based authentcation. we can also limit the IPs that will be able to connect to the instances by whitelisting the needed IPs using the security group.
+
+Add Network Access Control Lists (ACLs) to provide an additional layer of security at the subnet level, which will alow us to define rules for inbound and outbound traffic and can help restrict access to the created instances.
+
+Making sure to monitor the logs and the traffic using AWS CloudTrail and AWS CloudWatch to regularly check for anomalies or any security related issues.
